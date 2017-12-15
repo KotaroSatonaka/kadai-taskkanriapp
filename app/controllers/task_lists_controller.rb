@@ -17,6 +17,7 @@ class TaskListsController < ApplicationController
     
     if @task_list.save
       flash[:success] = 'TaskList が正常に投稿されました'
+      redirect_to @task_list
     else
       flash.now[:danger] = 'TaskList が投稿されませんでした'
       render :new
