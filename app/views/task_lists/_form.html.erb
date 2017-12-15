@@ -1,4 +1,17 @@
 <%= form_for(task_list) do |f| %>
+  <% if task_list.error.any? %>
+    <div id="error_explanation">
+      <ul>
+        <% task_list.error.full_task_lists.each do |task_list| %>
+          <li><%= task_list %></li>
+        <% end %>
+      </ul>
+    </div> 
+  <% end %>
+  
+  <%= f.label :title, 'タイトル' %>
+  <%= f.text_field :title %>
+  
   <%= f.label :content, 'タスク' %>
   <%= f.text_field :content %>
   
