@@ -6,7 +6,6 @@ class TaskListsController < ApplicationController
   end
   
   def show
-    set_task_list
   end
   
   def new
@@ -25,11 +24,9 @@ class TaskListsController < ApplicationController
   end
   
   def edit
-    set_task_list
   end
   
   def update
-    set_task_list
     if @task_list.update(task_list_params)
       flash[:success] = 'TaskList は正常に更新されました'
       redirect_to @task_list
@@ -40,7 +37,6 @@ class TaskListsController < ApplicationController
   end
   
   def destroy
-    set_task_list
     @task_list.destroy
     
     flash[:success] = 'TaskList は正常に削除されました'
