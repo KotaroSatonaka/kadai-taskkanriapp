@@ -1,4 +1,7 @@
 Rails.application.routes.draw do
+  get 'toppages/index'
+
+  root to: 'toppages#index'
   root to: 'task_lists#index'
   
   resources :task_lists
