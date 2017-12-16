@@ -12,15 +12,6 @@
 
 ActiveRecord::Schema.define(version: 20171215160010) do
 
-  create_table "resets", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
-    t.string   "TaskList"
-    t.string   "content"
-    t.integer  "user_id"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-    t.index ["user_id"], name: "index_resets_on_user_id", using: :btree
-  end
-
   create_table "task_lists", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
     t.string   "content"
     t.datetime "created_at", null: false
