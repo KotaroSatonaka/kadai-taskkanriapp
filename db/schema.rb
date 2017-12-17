@@ -35,6 +35,5 @@ ActiveRecord::Schema.define(version: 20171215160010) do
     t.datetime "updated_at",      null: false
   end
 
-  add_foreign_key "resets", "users"
   add_foreign_key "tasks", "users"
 end
