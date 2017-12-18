@@ -4,7 +4,7 @@ class TasksController < ApplicationController
   before_action :currect_user, only: [:destroy]
   
   def index
-    @tasks = Task.all
+    @tasks = Task.all.page(params[:page])
   end
   
   def show
