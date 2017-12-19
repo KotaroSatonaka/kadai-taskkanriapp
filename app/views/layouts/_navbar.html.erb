@@ -21,7 +21,8 @@
                 <li role="separator" class="divider"></li>
                 <li><%= link_to 'Logout', logout_path, method: :delete %></li>
               </ul>
-              <li><%= link_to '新規タスクの投稿', new_task_path %></li>
+              <li><%= link_to 'Create A New Task', new_task_path %></li>
+              <li><%= link_to 'List', tasks_url %></li>
             </li>
           <% else %>
             <li><%= link_to 'Signup', signup_path %></li>

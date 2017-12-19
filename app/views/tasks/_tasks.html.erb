@@ -10,11 +10,13 @@
           <%= link_to user.name, user_path(user) %> <span class="text-muted">posted at <%= task.created_at %></span>
         </div>
         <div>
+          <p><%= task.title %></p>
           <p><%= task.content %></p>
         </div>
         <div>
           <% if current_user == task.user %>
             <%= link_to "Delete", task, method: :delete, data: { confirm: "You sure?" }, class: 'btn btn-danger btn-xs' %>
+            <%= link_to "Edit", edit_task_path(task), class: 'btn btn-default btn-xs' %>
           <% end %>
         </div>
       </div>
